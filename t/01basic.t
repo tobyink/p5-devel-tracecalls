@@ -40,6 +40,7 @@ my $testdir = 'File::Spec'->catdir($Bin, 'Local-Example', 't');
 my @testfiles = qw( test1.t test2.t );
 
 sub run_suite {
+	$ENV{PERL_TRACE_CALLS_SUITE} = 1;
 	$ENV{PERL_TRACE_CALLS} = shift;
 	chdir($projdir);
 	for my $test (@testfiles) {
