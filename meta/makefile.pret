@@ -9,7 +9,9 @@
 	:runtime-requirement    [ :on "JSON::PP"^^:CpanId ];
 	:runtime-requirement    [ :on "Sub::Util 1.40"^^:CpanId ];
 	:runtime-requirement    [ :on "match::simple"^^:CpanId ];
+	:runtime-recommendation [ :on "namespace::autoclean"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
+	:test-requirement       [ :on "namespace::autoclean"^^:CpanId ];
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
 	.
 
