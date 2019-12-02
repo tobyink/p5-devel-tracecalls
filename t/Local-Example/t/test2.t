@@ -2,6 +2,11 @@ use strict;
 use warnings;
 use Test::More tests => 3;
 
+use File::Spec;
+use FindBin qw($Bin);
+use lib File::Spec->catdir($Bin, '..', 'lib');
+use lib File::Spec->catdir($Bin, '..', '..', '..', 'lib');
+
 use Local::Example;
 
 is(
