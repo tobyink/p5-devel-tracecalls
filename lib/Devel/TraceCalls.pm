@@ -54,7 +54,7 @@ sub wrap_sub {
 	my ($package, $sub) = @_;
 	($package, $sub) = (/^(.+)::([^:]+)$/ =~ $package)
 		if !defined $sub;
-	my $code    = \&{"$package\::$sub"};
+	my $code    = \&{"$package\::$sub"} or return;
 	my $newcode =
 		Sub::Util::set_prototype Sub::Util::prototype($code),
 		Sub::Util::set_subname Sub::Util::subname($code),
