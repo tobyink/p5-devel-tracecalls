@@ -26,7 +26,7 @@ our %CALL;
 sub import {
 	my $me = shift;
 	my $caller = caller;
-	my (%opts) = @_;	
+	my (%opts) = @_;
 	&Hook::AfterRuntime::after_runtime(
 		sub { $me->setup_for($caller, %opts) },
 	) if ACTIVE;
