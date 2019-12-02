@@ -16,7 +16,7 @@ BEGIN {
 		use FindBin ();
 		use Hook::AfterRuntime ();
 		use JSON::PP ();
-		use Sub::Util ();
+		use Sub::Util 1.40 ();
 		1;
 	} || die($@) if ACTIVE;
 };
@@ -56,7 +56,7 @@ sub wrap_sub {
 		if !defined $sub;
 	my $code    = \&{"$package\::$sub"};
 	my $newcode =
-		Sub::Util::set_prototype prototype($code),
+		Sub::Util::set_prototype Sub::Util::prototype($code),
 		Sub::Util::set_subname Sub::Util::subname($code),
 		sub { ++$CALL{$package}{$sub}; goto $code };
 	*{"$package\::$sub"} = $newcode;

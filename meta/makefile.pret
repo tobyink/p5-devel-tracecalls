@@ -7,7 +7,7 @@
 	:runtime-requirement    [ :on "FindBin"^^:CpanId ];
 	:runtime-requirement    [ :on "Hook::AfterRuntime"^^:CpanId ];
 	:runtime-requirement    [ :on "JSON::PP"^^:CpanId ];
-	:runtime-requirement    [ :on "Sub::Util"^^:CpanId ];
+	:runtime-requirement    [ :on "Sub::Util 1.40"^^:CpanId ];
 	:runtime-requirement    [ :on "match::simple"^^:CpanId ];
 	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
 	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
