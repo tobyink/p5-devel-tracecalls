@@ -177,6 +177,11 @@ at import time. The default C<match> coderef is just:
 Please report any bugs to
 L<http://rt.cpan.org/Dist/Display.html?Queue=Devel-TraceCalls>.
 
+=head1 SEE ALSO
+
+L<https://travis-ci.org/tobyink/p5-devel-tracecalls>,
+L<https://ci.appveyor.com/project/tobyink/p5-devel-tracecalls>.
+
 =head1 AUTHOR
 
 Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
