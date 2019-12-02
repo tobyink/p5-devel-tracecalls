@@ -21,9 +21,7 @@ BEGIN {
 	} || die($@) if ACTIVE;
 };
 
-our $JSON;
 our %CALL;
-$JSON = 'JSON::PP'->new->pretty(1)->canonical(1) if ACTIVE;
 
 sub import {
 	my $me = shift;
@@ -66,7 +64,8 @@ sub wrap_sub {
 
 END {
 	if (ACTIVE) {
-		my $map = $JSON->encode(\%CALL);
+		my $JSON = 'JSON::PP'->new->pretty(1)->canonical(1);
+		my $map  = $JSON->encode(\%CALL);
 		
 		my $outfile = 'File::Spec'->catfile(
 			$FindBin::RealBin,
