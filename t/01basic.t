@@ -44,6 +44,12 @@ sub run_suite {
 	chdir($projdir);
 	for my $test (@testfiles) {
 		note $test;
+		diag '{{{'.join(" " =>
+			$^X,
+			"-I$dtc_libdir",
+			"-I$libdir",
+			"t/$test",
+		).'}}}';
 		open(
 			my $fh,
 			'-|',
