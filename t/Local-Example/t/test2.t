@@ -14,6 +14,8 @@ is(
 	'Local::Example::Module1->bar',
 );
 
+Local::Example::quux();
+
 is(
 	Local::Example::quux(),
 	'Local::Example->quux',
