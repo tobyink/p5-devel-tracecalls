@@ -25,9 +25,11 @@ use warnings;
 use Test::More;
 
 use Devel::TraceCalls ();
-use FindBin qw( $Bin );
+use FindBin qw( $RealBin );
 use File::Spec ();
 use JSON::PP;
+
+my $Bin = $RealBin;
 
 my $dtc_libdir = 'File::Spec'->catdir($Bin, '..', 'lib');
 
